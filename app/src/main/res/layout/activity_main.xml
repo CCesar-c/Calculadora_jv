@@ -11,66 +11,74 @@
         android:id="@+id/id_input_1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
+        android:layout_marginBottom="20dp"
         android:ems="10"
+        android:hint="Primeiro numero"
         android:inputType="numberDecimal"
-        android:text="Primeiro numero"
         app:layout_constraintBottom_toTopOf="@+id/id_input_sinal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_text" />
 
     <EditText
         android:id="@+id/id_input_sinal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
         android:ems="10"
+        android:hint="sinal"
         android:inputType="text"
-        android:text="sinal"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="193dp" />
+        app:layout_constraintBottom_toTopOf="@+id/id_input_2"
+        app:layout_constraintStart_toStartOf="@+id/id_input_1"
+        app:layout_constraintTop_toBottomOf="@+id/id_input_1" />
+
+    <TextView
+        android:id="@+id/id_text"
+        android:layout_width="119dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="137dp"
+        android:layout_marginBottom="28dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_input_1"
+        app:layout_constraintEnd_toEndOf="@+id/id_input_1"
+        app:layout_constraintStart_toStartOf="@+id/id_input_1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Calculadora" />
 
     <EditText
         android:id="@+id/id_input_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="56dp"
         android:ems="10"
+        android:hint="Segundonumero"
         android:inputType="numberDecimal"
-        android:text="Segundonumero"
-        tools:layout_editor_absoluteX="100dp"
-        tools:layout_editor_absoluteY="262dp" />
-
-    <TextView
-        android:id="@+id/id_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Calculadora"
-        app:layout_constraintBottom_toTopOf="@+id/id_input_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Calculadora" />
+        app:layout_constraintBottom_toTopOf="@+id/id_text_repos"
+        app:layout_constraintStart_toStartOf="@+id/id_input_sinal"
+        app:layout_constraintTop_toBottomOf="@+id/id_input_sinal" />
 
     <TextView
         android:id="@+id/id_text_repos"
-        android:layout_width="75dp"
-        android:layout_height="20dp"
+        android:layout_width="111dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="78dp"
         android:text="Resposta: 0"
         app:layout_constraintBottom_toTopOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_input_2"
-        app:layout_constraintVertical_bias="0.522"
-        tools:text="Resposta: 0" />
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/id_input_2" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcula"
-        android:onClick="Calcular"
+        android:layout_marginBottom="168dp"
+
+        android:text="@string/calcula"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/id_input_sinal"
-        app:layout_constraintVertical_bias="0.498"
-        tools:layout_editor_absoluteX="160dp" />
+        app:layout_constraintEnd_toEndOf="@+id/id_text"
+        app:layout_constraintStart_toStartOf="@+id/id_text"
+        app:layout_constraintTop_toBottomOf="@+id/id_text_repos" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
